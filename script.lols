@@ -1,0 +1,8 @@
+item $lol 1
+item $test 0
+
+teamfight $lol $test $lol
+
+facecheck 10 > $test
+openchat $test
+endcheck
