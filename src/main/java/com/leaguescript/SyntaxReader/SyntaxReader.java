@@ -16,6 +16,7 @@ public class SyntaxReader {
     private HashMap<String, Keyword> h;
     private Items varList;
     public static int lineNuml;
+    private Cache cache;
 
     public SyntaxReader(){
         h = new HashMap<String, Keyword>();
@@ -25,6 +26,7 @@ public class SyntaxReader {
         h.put("item", new item());
         h.put("endcheck", new endcheck());
         varList = new Items();
+        cache = new Cache();
         SyntaxReader.lineNuml = 0;
     }
     public void runCode(Scanner s) throws BadGrammer, InvalidItemName{
@@ -39,7 +41,7 @@ public class SyntaxReader {
                 continue;
             }
             else if (h.containsKey(line[0])){
-                new processCommand().run(h.get(line[0]), line, s, lineNuml, varList);
+                new processCommand().run(h.get(line[0]), line, s, lineNuml, varList, cache);
             } 
             else{
                 throw new BadGrammer("Learn to spell at line: " + lineNuml);

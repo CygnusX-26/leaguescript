@@ -4,6 +4,7 @@ import java.util.Scanner;
 import com.leaguescript.Items;
 import com.leaguescript.Errors.BadGrammer;
 import com.leaguescript.Errors.InvalidItemName;
+import com.leaguescript.SyntaxReader.Cache;
 
 public class teamfight implements Keyword{
     /**
@@ -11,7 +12,7 @@ public class teamfight implements Keyword{
      * @throws InvalidItemName
      */
     @Override
-    public void run(String[] args, Scanner s, int lineNum, Items varList) throws BadGrammer, InvalidItemName{
+    public void run(String[] args, Scanner s, int lineNum, Items varList, Cache cache) throws BadGrammer, InvalidItemName{
         if(args.length < 4){
             throw new BadGrammer("YOU CANT GROUP LIKE THAT at line: " + lineNum);
         }
@@ -27,6 +28,6 @@ public class teamfight implements Keyword{
                 temp += args[i];
             }
         }
-        varList.storeItem(args[args.length - 1], temp);
+        // varList.storeItem(args[args.length - 1], temp);
     }
 }

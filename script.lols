@@ -1,8 +1,6 @@
-item $lol 1
-item $test 0
-
-teamfight $lol $test $lol
-
-facecheck 10 > $test
+item $lol 1:int
+item $test 10:int
+openchat lol
+facecheck 10 > 3 && $test == $lol
 openchat $test
 endcheck

@@ -4,6 +4,7 @@ import java.util.Scanner;
 import com.leaguescript.Items;
 import com.leaguescript.Errors.BadGrammer;
 import com.leaguescript.Errors.InvalidItemName;
+import com.leaguescript.SyntaxReader.Cache;
 
 public class openchat implements Keyword{
     /**
@@ -11,7 +12,7 @@ public class openchat implements Keyword{
      * @throws BadGrammer
      */
     @Override
-    public void run(String[] args, Scanner s, int lineNum, Items varList) throws BadGrammer, InvalidItemName{
+    public void run(String[] args, Scanner s, int lineNum, Items varList, Cache cache) throws BadGrammer, InvalidItemName{
         if (args.length <= 0){
             throw new BadGrammer("Learn to spell at line: " + lineNum);
         }

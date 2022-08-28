@@ -4,7 +4,8 @@ import java.util.Scanner;
 import com.leaguescript.Items;
 import com.leaguescript.Errors.BadGrammer;
 import com.leaguescript.Errors.InvalidItemName;
+import com.leaguescript.SyntaxReader.Cache;
 
 public interface Keyword {
-    public void run(String[] args, Scanner s, int lineNum, Items varList) throws BadGrammer, InvalidItemName;
+    public void run(String[] args, Scanner s, int lineNum, Items varList, Cache cache) throws BadGrammer, InvalidItemName;
 }
