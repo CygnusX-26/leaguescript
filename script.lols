@@ -1,7 +1,23 @@
-item $lol 1:int
+? declare variables
+? $lol is an integer initialized to 1
+? $test is a string initialized to "he"
 
+item $lol 1:int
 item $test he:str
 
+? initialize a new variable from others
+? $test2 is a string initialized to $test + 4
 item $test2 $test + 4:str
 
+?print the variable $test2
 openchat $test2
+
+?if statement
+facecheck $lol < 0 || 7 > 7
+openchat yes!
+openchat aoisdoiasiojd
+openchat 09asjd09ajsd
+
+?ends the if statement (like a closing bracket)
+endcheck
+
