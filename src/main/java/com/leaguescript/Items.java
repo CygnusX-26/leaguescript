@@ -1,14 +1,21 @@
 package com.leaguescript;
 
 import java.util.HashMap;
+import com.leaguescript.Errors.BadGrammer;
 import com.leaguescript.Errors.InvalidItemName;
 import com.leaguescript.SyntaxReader.SyntaxReader;
 
 public class Items {
     private HashMap<String, Object> items = new HashMap<String, Object>();
-    public void storeItem(String s, String args, String type){
+    public void storeItem(String s, String args, String type) throws BadGrammer{
         if (type.equals("int")){
-            items.put(s, (Integer)Integer.parseInt(args));
+            try{
+                items.put(s, (Integer)Integer.parseInt(args));
+            }
+            catch (NumberFormatException e){
+                throw new BadGrammer("Cannot fit an item of that type into an item of type: " + type);
+            }
+            
         }
         else if (type.equals("str")){
             items.put(s, args);
