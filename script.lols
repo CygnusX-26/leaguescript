@@ -1,9 +1,7 @@
 item $lol 1:int
 
-item $test 10:int
+item $test he:str
 
-item $test2 $test + 4:int
+item $test2 $test + 4:str
 
-facecheck $test2 > $lol
-openchat $lol
-endcheck
+openchat $test2
