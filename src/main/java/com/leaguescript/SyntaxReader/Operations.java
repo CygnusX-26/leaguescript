@@ -7,6 +7,17 @@ import com.leaguescript.Errors.BadGrammer;
  * All types of operations
  */
 public class Operations {
+    private static boolean isNumeric(Object arg2) {
+        if (arg2 == null) {
+            return false;
+        }
+        try {
+            double d = Double.parseDouble(arg2.toString());
+        } catch (NumberFormatException nfe) {
+            return false;
+        }
+        return true;
+    }
     public static Boolean isLess(Object arg1, Object arg2) throws BadGrammer{
         if (arg1 instanceof Integer && arg2 instanceof Integer){
             return ((Integer)arg1).compareTo((Integer)arg2) > 0;
@@ -99,5 +110,26 @@ public class Operations {
         else{
             throw new BadGrammer("Those must be booleans fool");
         }
+    }
+
+    public static String add(Object arg1, Object arg2){
+        if (isNumeric(arg1) && isNumeric(arg2)){
+            return ((Integer)arg1 + (Integer)arg2) + "";
+        }
+        else{
+            return arg1.toString() + arg2.toString();
+        }
+    }
+    public static Integer sub(Object arg1, Object arg2){
+        return ((Integer)arg1 - (Integer)arg2);
+    }
+    public static Integer mul(Object arg1, Object arg2){
+        return ((Integer)arg1 * (Integer)arg2);
+    }
+    public static Integer div(Object arg1, Object arg2){
+        return ((Integer)arg1 / (Integer)arg2);
+    }
+    public static Integer mod(Object arg1, Object arg2){
+        return ((Integer)arg1 % (Integer)arg2);
     }
 }

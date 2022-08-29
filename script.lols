@@ -1,6 +1,9 @@
 item $lol 1:int
+
 item $test 10:int
-openchat lol
-facecheck 10 > 3 && $test == $lol
-openchat $test
+
+item $test2 $test + 4:int
+
+facecheck $test2 > $lol
+openchat $lol
 endcheck

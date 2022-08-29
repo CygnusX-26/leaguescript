@@ -84,7 +84,6 @@ public class facecheck
                 argsAsObj.set(i-1, new Integer(args[i]));
             }
         }
-        System.out.println(argsAsObj);
         for (int i = 0; i < argsAsObj.size(); i ++){
             switch (i % 4){
                 case 0:
