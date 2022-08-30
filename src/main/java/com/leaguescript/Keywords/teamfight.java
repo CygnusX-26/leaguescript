@@ -8,7 +8,7 @@ import com.leaguescript.SyntaxReader.Cache;
 
 public class teamfight implements Keyword{
     /**
-     * concat two variables
+     * takes user input
      * @throws InvalidItemName
      */
     @Override
