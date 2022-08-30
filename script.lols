@@ -1,21 +1,33 @@
-? declare variables
-? $lol takes in an input and classifies it as a string
-? $test is a string initialized to "he"
 
-item $lol teamfight:str
-item $test he:str
+? ---- Simple Calculator Program in script.lols ----
 
-? initialize a new variable from others
-? $test2 is a string initialized to $test + 4
-item $test2 $test + 4:str
+item $x teamfight:int 
+item $y teamfight:int
+item $z teamfight:str
 
-?print the variable $test2
-openchat $test2
-
-?if statement
-facecheck -1 < 0 || 7 > 7
-openchat $lol
-
-?ends the if statement (like a closing bracket)
+facecheck $z == +
+item $output $x + $y:int
+openchat $x $z $y = $output
 endcheck
+
+facecheck $z == -
+item $output $x - $y:int
+openchat $x $z $y = $output
+endcheck
+
+facecheck $z == *
+item $output $x * $y:int
+openchat $x $z $y = $output
+endcheck
+
+facecheck $z == /
+item $output $x / $y:int
+openchat $x $z $y = $output
+endcheck
+
+facecheck $z == %
+item $output $x % $y:int
+openchat $x $z $y = $output
+endcheck
+
 

@@ -50,8 +50,8 @@ public class item implements Keyword{
         }
         else if (args[2].startsWith("teamfight")){
             Scanner scan = new Scanner(System.in);
-                varList.storeItem(args[1], scan.nextLine(), typeIdentifier[1]);
-        }
+                varList.storeItem(args[1], scan.nextLine(), typeIdentifier[1]);        
+            }
         else if (args.length == 3){
             varList.storeItem(args[1], typeIdentifier[0], typeIdentifier[1]);
         }
@@ -74,7 +74,7 @@ public class item implements Keyword{
             for (int i = 0; i < cache.getOperatorStack().size(); i ++){
                 cache.pushNumbersStack(parseCalculation(cache.popNumbersStack(), cache.popNumbersStack(), cache.popOperatorStack(), lineNum));
             }
-            varList.storeItem(args[1], (String)cache.popNumbersStack(), typeIdentifier[1]);
+            varList.storeItem(args[1], cache.popNumbersStack().toString(), typeIdentifier[1]);
         }
         
     }

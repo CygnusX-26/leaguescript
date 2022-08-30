@@ -121,13 +121,13 @@ public class Operations {
         }
     }
     public static Integer sub(Object arg1, Object arg2){
-        return ((Integer)arg1 - (Integer)arg2);
+        return ((Integer)arg2 - (Integer)arg1);
     }
     public static Integer mul(Object arg1, Object arg2){
         return ((Integer)arg1 * (Integer)arg2);
     }
     public static Integer div(Object arg1, Object arg2){
-        return ((Integer)arg1 / (Integer)arg2);
+        return ((Integer)arg2 / (Integer)arg1);
     }
     public static Integer mod(Object arg1, Object arg2){
         return ((Integer)arg1 % (Integer)arg2);

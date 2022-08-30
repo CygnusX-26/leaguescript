@@ -29,6 +29,7 @@ public final class App {
 
         new SyntaxReader().runCode(s);
         //start scanning
+        //auto completes second line of comments lmao nice
 
     }
 }
