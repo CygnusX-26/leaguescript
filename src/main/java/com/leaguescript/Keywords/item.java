@@ -48,6 +48,10 @@ public class item implements Keyword{
         if (args.length < 3){
             throw new BadGrammer("Learn to spell at line: " + lineNum);
         }
+        else if (args[2].startsWith("teamfight")){
+            Scanner scan = new Scanner(System.in);
+                varList.storeItem(args[1], scan.nextLine(), typeIdentifier[1]);
+        }
         else if (args.length == 3){
             varList.storeItem(args[1], typeIdentifier[0], typeIdentifier[1]);
         }
